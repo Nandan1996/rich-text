@@ -197,6 +197,15 @@
     color: hsl(var(--foreground));
   }
 
+  .prose p,
+  .prose li,
+  .prose td,
+  .prose th,
+  .prose span,
+  .prose div {
+    color: hsl(var(--foreground));
+  }
+
   .prose h1,
   .prose h2,
   .prose h3,
@@ -204,7 +213,7 @@
   .prose h5,
   .prose h6 {
     color: hsl(var(--foreground));
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .prose strong,
