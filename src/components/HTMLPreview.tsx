@@ -9,7 +9,7 @@ export function HTMLPreview({ htmlContent }: HTMLPreviewProps) {
 
   // Update preview content
   useEffect(() => {
-    if (previewRef.current) {
+    if (previewRef.current && htmlContent) {
       previewRef.current.innerHTML = htmlContent;
     }
   }, [htmlContent]);
@@ -32,11 +32,17 @@ export function HTMLPreview({ htmlContent }: HTMLPreviewProps) {
       <div className="flex-1 overflow-auto custom-scrollbar">
         <div
           ref={previewRef}
-          className="p-4 prose prose-invert max-w-none"
+          className="p-4 prose max-w-none"
           style={{
             fontFamily: 'Inter, system-ui, sans-serif',
           }}
-        />
+        >
+          {!htmlContent && (
+            <div className="text-muted-foreground text-center py-8">
+              Start typing markdown to see the preview...
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
