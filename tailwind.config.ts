@@ -61,7 +61,32 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				editor: {
+					bg: 'hsl(var(--editor-bg))',
+					border: 'hsl(var(--editor-border))',
+					selection: 'hsl(var(--editor-selection))'
+				},
+				syntax: {
+					keyword: 'hsl(var(--syntax-keyword))',
+					string: 'hsl(var(--syntax-string))',
+					comment: 'hsl(var(--syntax-comment))',
+					number: 'hsl(var(--syntax-number))',
+					operator: 'hsl(var(--syntax-operator))',
+					punctuation: 'hsl(var(--syntax-punctuation))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-code': 'var(--gradient-code)'
+			},
+			boxShadow: {
+				'code': 'var(--shadow-code)',
+				'panel': 'var(--shadow-panel)'
+			},
+			fontFamily: {
+				'mono': ['JetBrains Mono', 'Fira Code', 'Consolas', 'monospace'],
+				'sans': ['Inter', 'system-ui', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -92,5 +117,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
