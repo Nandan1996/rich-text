@@ -40,7 +40,7 @@ jobs:
 
       - name: Build
         env:
-          VITE_BASE_PATH: "/${{ steps.repo.outputs.REPO_NAME }}/"
+          VITE_BASE_PATH: "/${{ steps.repo.outputs.REPO_NAME }}"
           NODE_ENV: production
         run: npm run build
 
