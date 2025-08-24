@@ -207,6 +207,18 @@
     font-weight: 600;
   }
 
+  .prose strong,
+  .prose b {
+    color: hsl(var(--foreground));
+    font-weight: 700;
+  }
+
+  .prose em,
+  .prose i {
+    color: hsl(var(--foreground));
+    font-style: italic;
+  }
+
   .prose a {
     color: hsl(var(--primary));
     text-decoration: underline;
